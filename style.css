@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  size: 62.5%;
+  font-size: 62.5%;
 }
 
 video {
@@ -52,7 +52,7 @@ video {
   position: relative;
 }
 
-h4 {
+h2 {
   margin: 0;
 }
 
@@ -68,9 +68,9 @@ i {
   transform: translateX(-25%);
 }
 
-@media only screen and (min-device-width: 480px) {
+@media screen and (min-width: 300px) and (max-width: 800px) {
   .logo {
-    width: 50%;
+    width: 80%;
     height: auto;
   }
   .musicPlayer {
