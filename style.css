@@ -70,10 +70,11 @@ i {
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
   .logo {
-    width: 80%;
+    width: 60%;
     height: auto;
   }
   .musicPlayer {
     width: 80%;
+    height: 25%;
   }
 }/*# sourceMappingURL=style.css.map */
