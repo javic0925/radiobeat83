@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Beat83 | Radio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video playsinline autoplay muted loop poster="/Assets/Background/Beat83backgroundstill.jpg" id="bgvid">
+        <source src="/Assets/Background/Beat83background.webm" type="video/webm">
+        <source src="/Assets/Background/Beat83background.mp4" type="video/mp4">
+      </video>
+
+    <section class="main">
+        <div class="logo">
+            <img src="/Assets/Beat83 Logo@4x.png" alt="Beat83 Logo">
+        </div>
+        <div class="musicPlayer">
+            <h4>Beat83 Radio</h4>
+            <hr class="new1">
+            <i class="fa-solid fa-circle-play fa-2xl" style="color: #ffffff;" id="play" onclick="play()" ></i>
+            <audio id="audio" src=" https://ice55.securenetsystems.net/DASH48"></audio>
+        </div>
+    </section>
+
+<script>
+    function play() {
+        var audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+            
+        }else{
+            audio.pause();
+            audio.currentTime = 0
+            
+        }
+    }
+</script>
+</body>
+</html>
