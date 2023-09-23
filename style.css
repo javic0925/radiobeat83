@@ -71,7 +71,7 @@ hr.new1 {
 i {
   margin-top: 1rem;
   margin-left: 50%;
-  transform: translateX(-25%);
+  transform: translateX(-50%);
 }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
