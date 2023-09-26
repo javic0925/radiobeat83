@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+html{
     font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
 }
 
 video {
@@ -29,7 +32,7 @@ video {
 }
 
 .logo{
-    width: 15%;
+    width:25rem;
     height: auto;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -41,43 +44,43 @@ video {
 }
 
 .musicPlayer{
-    margin-top: 2rem;
-    width: 20%;
-    height: 10%;
-    border-radius: 10px;
+    width: 30rem;
+    height: 12rem;
+    border-radius: 1rem;
     padding: 1rem;
     background-color: rgba(76, 76, 76, 0.25);
     color:white;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
-h2{font-size: 1.7rem;}
+h2{font-size: 1.6rem;
+}
+#liveIcon{
+    margin-left: .5rem;
+    width: 6rem;
+    height: 1.8rem;
+        }
 hr.new1 {
-    margin-top: .5rem;
-    margin-bottom: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.63);
+    height: .1rem;
     width: 100%;
   }
 
-  .fa-2xl {
-    font-size: 15em;
-    line-height: 3rem;
-} 
-i{ 
-    margin-top: 1rem; 
-    margin-left:50% ;
+#player{
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    margin-left: 50%;
     transform: translateX(-50%);
-    
-}
-@media screen and (min-width: 300px) and (max-width: 800px){
+    font-size: 3rem;
+    line-height: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
 
-    .logo{
-        width: 60%;
-        height: auto;
-    }
-    
-    .musicPlayer{
-        
-        width: 80%;
-        height: 15%;
-    }
-}
+
