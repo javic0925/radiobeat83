@@ -11,6 +11,26 @@
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="./js/player.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/MHW1VIFMyqSy77Yd/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)"),
+          document.getElementById("myForm").reset();
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
 </head>
 <body>
     <video playsinline autoplay muted loop poster="/Assets/Background/Beat83backgroundstill.jpg" id="bgvid">
@@ -30,13 +50,44 @@
             <div id="player">
                 <span id="playback" class="fa fa-play-circle fa-lg"></span>
             </div>
+            <div class="container">
+                <div class="interior">
+                    <a class="btn" href="#open-modal"> <span id="request" class="fa fa-solid fa-message"> </span></a>
+                </div>
+              </div>
+            
             <audio id="audio" src=" https://ice55.securenetsystems.net/DASH48"></audio>
         </div>
     </section>
     <section class="socialMedia">
         <img src="" alt="">
     </section>
-
+    <div id="open-modal" class="modal-window">
+        <div>
+          <a href="#" title="Close" class="modal-close">Close</a>
+          <h1>Hola!</h1>
+          <div>Manda tu mensaje o solicita tu cancion atravez de este formulario!</div>
+          <br>
+          <div><small>Gracias por estar con nosotros 😀</small></div>
+          <br>
+          <form id="myForm">
+            <label>Nombre</label>
+            <br/>
+            <input id="name" name="full_name" />
+            <br/>
+            <br/>
+            <label>Message</label>
+            <br/>
+            <textarea id="textarea" name="message">
+            </textarea>
+            <br/>
+            <br/>
+          </form>
+          <a href="#" title="Close" class="modal-close2">
+          <button onclick="SubForm()">Submit</button></a>
+        </div>
+    </div>
+    
     <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
 </body>
 </html>

@@ -71,7 +71,7 @@ hr.new1 {
   }
 
 #player{
-    width: 100%;
+    width: auto;
     height: 50%;
     align-self: center;
     margin-left: 50%;
@@ -84,3 +84,105 @@ hr.new1 {
 } 
 
 
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    i {
+      padding-right: 0.3em;
+    }
+  }
+
+
+  .modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 1.6rem;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    & > div {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 2em;
+      background: white;
+    }
+    header {
+      font-weight: bold;
+    }
+    h1 {
+      font-size: 150%;
+      margin: 0 0 15px;
+    }
+  }
+  
+  .modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
+  }
+  
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+
+  
+  .modal-window {
+    & > div {
+      border-radius: 1rem;
+    }
+  }
+  
+  .modal-window div:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  
+  small {
+    color: lightgray;
+  }
+
+#myForm{
+    width: 100%;
+    #name{
+        height: 3rem;
+        width: 100%;
+        border:solid;
+        border-color: lightgray;
+        border-width: .2rem;
+        border-radius: .5rem;
+    }
+    #textarea{
+        height: 8rem;
+        width: 100%;
+        border:solid;
+        border-color: lightgray;
+        border-width: .2rem;
+        border-radius: .5rem;
+    }
+}
