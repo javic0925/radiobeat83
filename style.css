@@ -60,7 +60,9 @@ video {
   width: 100vw;
   height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 1rem;
   align-items: center;
   overflow: hidden;
 }
@@ -81,6 +83,23 @@ video {
   filter: drop-shadow(0px 10px 15px #000000);
 }
 
+.socialIcons {
+  height: auto;
+  width: 43%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.socialIcons h2 {
+  width: 100%;
+}
+.socialIcons a img {
+  height: 3rem;
+}
+
 #playerInfo {
   width: 75%;
   height: 80%;
@@ -89,11 +108,12 @@ video {
   flex-wrap: wrap;
 }
 #playerInfo h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 #playerInfo p {
-  line-height: 2rem;
+  line-height: auto;
+  font-size: 1.4rem;
 }
 
 #playerButtons {
@@ -103,12 +123,12 @@ video {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: 0 0.5rem;
 }
 
 #buyMeACoffee {
   width: auto;
-  height: 80%;
+  height: 100%;
 }
 #buyMeACoffee #bmac {
   height: 100%;
@@ -118,18 +138,11 @@ video {
 #messageUs {
   height: 100%;
   width: auto;
-  background-color: yellowgreen;
-  border-radius: 0.2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: row;
-  padding: 0 1rem;
-  color: black;
 }
-#messageUs p {
-  margin-left: 0.5rem;
-  font-size: 1rem;
+
+#messageUsPic {
+  height: 100%;
+  width: auto;
 }
 
 #player {
@@ -155,7 +168,7 @@ video {
 }
 
 .btn {
-  height: 80%;
+  height: 100%;
   max-width: 250px;
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -259,6 +272,9 @@ small {
     width: 80%;
     height: 40%;
   }
+  .socialIcons {
+    width: 87%;
+  }
 }
 @media screen and (min-width: 200px) and (max-width: 390px) {
   .playerMain {
@@ -268,5 +284,8 @@ small {
     position: relative;
     width: 80%;
     height: 35%;
+  }
+  .socialIcons {
+    width: 87%;
   }
 }/*# sourceMappingURL=style.css.map */
