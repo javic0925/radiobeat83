@@ -13,16 +13,16 @@ $(function () {
     
     });
     $('#player').bind('click', function() {
-        if ($('#playback').attr('class') == 'fa fa-solid fa-circle-pause fa-lg')
-            $('#playback').attr('class', 'fa fa-soli fa-circle-play fa-lg');
+        if ($('#playback').attr('src') == './Assets/Icons/play_music_icon.png')
+            $('#playback').attr('src', './Assets/Icons/stop_music_icon.png');
         else
-            $('#playback').attr('class', 'fa fa-solid fa-circle-pause fa-lg');
+            $('#playback').attr('src', './Assets/Icons/play_music_icon.png');
     });
 
     song.addEventListener('pause', function () {
         song.setAttribute('src' , 'https://ice55.securenetsystems.net/DASH48');
         song.currentTime = 0;
-        $('#playback').attr('class', 'fa fa-soli fa-circle-play fa-lg');
+        $('#playback').attr('src', './Assets/Icons/play_music_icon.png');
     });
 
     

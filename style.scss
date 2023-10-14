@@ -4,91 +4,168 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Jetbrains;
+  src: local('Jetbrains'), 
+        url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
 html{
     font-size: 62.5%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Jetbrains', monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
 }
 
 video {
-    position: relative;
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
   }
 
 .main{
-    position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 
 }
 
 .logo{
-    width:25rem;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 2rem;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
     img{
-        height: auto;
-        width: 100%;
+        height: 3rem;
+        width: auto;
         object-fit: cover;}
 
 }
 
+.playerMain{
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+
 .musicPlayer{
-    width: 30rem;
-    height: 12rem;
-    border-radius: 1rem;
-    padding: 1rem;
-    background-color: rgba(76, 76, 76, 0.25);
-    color:white;
     position: relative;
+    width: 75%;
+    height: 40%;
+    transform: translateX(-5%);
+    border-radius: 1rem 3rem 3rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.10);
+    color:white;
+
+    
+    }
+
+
+#playerInfo{
+    width: 75%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    h2{
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    p{line-height: 2rem;}
 }
-h2{font-size: 1.6rem;
+#playerButtons{
+  width: 75%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
-#liveIcon{
-    margin-left: .5rem;
-    width: 6rem;
-    height: 1.8rem;
-        }
-hr.new1 {
-    border-top: 1px solid rgba(255, 255, 255, 0.63);
-    height: .1rem;
-    width: 100%;
+#buyMeACoffee{
+width: auto;
+height: 80%;
+#bmac{
+  height: 100%;
+  width: auto;
+}
+}
+
+
+#messageUs{
+  height: 100%;
+  background-color: yellowgreen;
+  border-radius: .2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem;
+  color: black;
+  p{
+    margin-left:.5rem ;
+    font-size: 1rem;
   }
+}
+
+
+
 
 #player{
-    width: auto;
-    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(25%);
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-color: #F6F8FF;
+    height: 100%;
     align-self: center;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-size: 3rem;
     line-height: 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    #playback{
+      height: auto;
+      width: 35%;
+    }
 } 
 
 
 .btn {
-    color: white;
+    height: 80%;
+    max-width:250px ;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 3rem;
-    i {
+       i {
       padding-right: 0.3em;
     }
   }
@@ -120,10 +197,9 @@ hr.new1 {
       transform: translate(-50%, -50%);
       padding: 2em;
       background: white;
+      color: black;
     }
-    header {
-      font-weight: bold;
-    }
+  
     h1 {
       font-size: 150%;
       margin: 0 0 15px;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -10,13 +11,15 @@
     <title>Beat83 | Radio</title>
     <link rel="icon" href="https://beat83.com/root/uploads/2021/04/cropped-favicon-192x192.png" sizes="192x192">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="./js/player.js"></script>
+    <script src="./Js/player.js"></script>
     <link rel="stylesheet" href="style.css">
+    
     <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-<script>
+  crossorigin="anonymous">
+    </script>
+    <script>
 function SubForm (){
     $.ajax({
         url:'https://api.apispreadsheets.com/data/MHW1VIFMyqSy77Yd/',
@@ -30,10 +33,13 @@ function SubForm (){
         }
     });
 }
-</script>
+    </script>
+    
+
+
 </head>
 <body>
-    <video playsinline autoplay muted loop poster="/Assets/Background/Beat83backgroundstill.jpg" id="bgvid">
+ <video playsinline autoplay muted loop poster="/Assets/Background/Beat83backgroundstill.jpg" id="bgvid">
         <source src="/Assets/Background/Beat83background.webm" type="video/webm">
         <source src="/Assets/Background/Beat83background.mp4" type="video/mp4">
       </video>
@@ -42,26 +48,38 @@ function SubForm (){
         <div class="logo">
             <img src="/Assets/Beat83 Logo@4x.png" alt="Beat83 Logo">
         </div>
+        
+        
+    </section>
+    <section class="playerMain">
         <div class="musicPlayer">
-            <h2>Beat83 Radio</h4>
-            <img id="liveIcon" src="./Assets/Icons/live.png" alt="">
-            <hr class="new1">
-
-            <div id="player">
-                <span id="playback" class="fa fa-play-circle fa-lg"></span>
+            <div id="playerInfo">
+                <h2>Auto DJ</h2>
+                <p id="date-container"></p>
+                <script src="./Js/date.js"></script>
+                <p>NEW YORK</p>
+                <div id="id1eb1168bab426" a='{"t":"s","v":"1.2","lang":"en","locs":[],"ssot":"f","sics":"ms","cbkg":"#FFFFFF00","cfnt":"rgba(255,255,255,1)","slfs":12,"slis":16,"slgp":2,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Embed Weather on Website</a> with sharpweather.com</div><script async src="https://static1.sharpweather.com/widgetjs/?id=id1eb1168bab426"></script>
             </div>
-            <div class="container">
-                <div class="interior">
-                    <a class="btn" href="#open-modal"> <span id="request" class="fa fa-solid fa-message"> </span></a>
+            <div id="playerButtons">
+                <div id="buyMeACoffee">
+                    <img id="bmac" src="./Assets/Icons/yellow-button.png" alt="Yellow buy me a coffee button">
                 </div>
-              </div>
+                <a class="btn" href="#open-modal"><div id="messageUs">
+                     <span id="request" class="fa fa-solid fa-message"> </span>
+                    <p>Message us</p>
+                </div></a>
+            </div>
+            <div id="player">
+                <img id="playback" src="./Assets/Icons/play_music_icon.png" alt="Black play button">
+            </div>
             
             <audio id="audio" src=" https://ice55.securenetsystems.net/DASH48"></audio>
         </div>
     </section>
-    <section class="socialMedia">
-        <img src="" alt="">
-    </section>
+   <section class="bottomInfo">
+
+   </section>
+    
     <div id="open-modal" class="modal-window">
         <div>
           <a href="#" title="Close" class="modal-close">Close</a>
@@ -87,7 +105,6 @@ function SubForm (){
           <button onclick="SubForm()">Submit</button></a>
         </div>
     </div>
-    
     <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
 </body>
 </html>
