@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Jetbrains;
+  src: local("Jetbrains"), url("../fonts/JetBrainsMono-Regular.ttf") format("truetype");
+}
+html {
+  font-size: 62.5%;
+  font-family: "Jetbrains", monospace;
+  color: #F6F8FF;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: #F6F8FF;
+  overflow: hidden;
+}
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.logo img {
+  height: 3rem;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.playerMain {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.musicPlayer {
+  position: relative;
+  width: 40%;
+  height: 30%;
+  transform: translateX(-5%);
+  border-radius: 1rem 3rem 3rem 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0px 10px 15px #000000);
+}
+
+.socialIcons {
+  height: auto;
+  width: 43%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+.socialIcons h2 {
+  width: 100%;
+}
+.socialIcons a img {
+  height: 3rem;
+}
+
+#playerInfo {
+  width: 75%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#playerInfo h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+#playerInfo p {
+  line-height: auto;
+  font-size: 1.4rem;
+}
+
+#playerButtons {
+  width: 75%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 0.5rem;
+}
+
+#buyMeACoffee {
+  width: auto;
+  height: 100%;
+}
+#buyMeACoffee #bmac {
+  height: 100%;
+  width: auto;
+}
+
+#messageUs {
+  height: 100%;
+  width: auto;
+}
+
+#messageUsPic {
+  height: 100%;
+  width: auto;
+}
+
+#player {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(25%);
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: #F6F8FF;
+  height: 100%;
+  align-self: center;
+  line-height: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#player #playback {
+  height: auto;
+  width: 35%;
+}
+
+.btn {
+  height: 100%;
+  max-width: 250px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.btn i {
+  padding-right: 0.3em;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-size: 1.6rem;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+  color: #101619;
+}
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+.modal-close:hover {
+  color: #101619;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.modal-window > div {
+  border-radius: 1rem;
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+small {
+  color: lightgray;
+}
+
+#myForm {
+  width: 100%;
+}
+#myForm #name {
+  height: 3rem;
+  width: 100%;
+  border: solid;
+  border-color: lightgray;
+  border-width: 0.2rem;
+  border-radius: 0.5rem;
+}
+#myForm #textarea {
+  height: 8rem;
+  width: 100%;
+  border: solid;
+  border-color: lightgray;
+  border-width: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 390px) and (max-width: 1290px) {
+  .playerMain {
+    height: 50vh;
+  }
+  .musicPlayer {
+    position: relative;
+    width: 80%;
+    height: 40%;
+  }
+  .socialIcons {
+    width: 87%;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 390px) {
+  .playerMain {
+    height: 50vh;
+  }
+  .musicPlayer {
+    position: relative;
+    width: 80%;
+    height: 37%;
+    border-radius: 1rem;
+    transform: translateX(0);
+  }
+  .socialIcons {
+    width: 79%;
+  }
+  #player {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    right: 2rem;
+  }
+  #player #playback {
+    height: auto;
+    width: 35%;
+  }
+}/*# sourceMappingURL=style.css.map */
