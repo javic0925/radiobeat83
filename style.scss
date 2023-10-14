@@ -74,7 +74,7 @@ video {
 .musicPlayer{
     position: relative;
     width: 40%;
-    height: 25%;
+    height: 30%;
     transform: translateX(-5%);
     border-radius: 1rem 3rem 3rem 1rem;
     padding: 1rem;
@@ -304,10 +304,31 @@ height: 100%;
   .musicPlayer{
     position: relative;
     width: 80%;
-    height: 35%;
+    height: 37%;
+    border-radius: 1rem ;
+    transform: translateX(0);
+    
     }
 
   .socialIcons{
-    width: 87%;
+    width: 79%;
+;
   }  
+
+  #player{
+    
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    right: 2rem;
+  
+    
+    #playback{
+      height: auto;
+      width: 35%;
+
+    }
+} 
   }
