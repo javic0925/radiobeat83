@@ -22,7 +22,7 @@
     <script>
 function SubForm (){
     $.ajax({
-        url:'https://api.apispreadsheets.com/data/MHW1VIFMyqSy77Yd/',
+        url:'https://api.apispreadsheets.com/data/OrKBvxBULwHADfwr/',
         type:'post',
         data:$("#myForm").serializeArray(),
         success: function(){
@@ -56,13 +56,12 @@ function SubForm (){
             <div id="playerInfo">
                 <h2>Auto DJ</h2>
                 <p id="date-container"></p>
-                <script src="./Js/date.js"></script>
                 <p>NEW YORK</p>
                 <div id="id1eb1168bab426" a='{"t":"s","v":"1.2","lang":"en","locs":[],"ssot":"f","sics":"ms","cbkg":"#FFFFFF00","cfnt":"rgba(255,255,255,1)","slfs":14,"slis":25,"slgp":2,"sfnt":"a"}'><a href="https://sharpweather.com/widgets/">Embed Weather on Website</a> with sharpweather.com</div><script async src="https://static1.sharpweather.com/widgetjs/?id=id1eb1168bab426"></script>
             </div>
             <div id="playerButtons">
                 <div id="buyMeACoffee">
-                    <img id="bmac" src="./Assets/Icons/yellow-button.png" alt="Yellow buy me a coffee button">
+                    <a target="_blank" href="https://www.buymeacoffee.com/Javic0925"><img id="bmac" src="./Assets/Icons/yellow-button.png" alt="Yellow buy me a coffee button"></a>
                 </div>
                 <a class="btn" href="#open-modal"><div id="messageUs">
                 <img id="messageUsPic" src="./Assets/Icons/green-button.png" alt="green button with text message us">
@@ -82,7 +81,12 @@ function SubForm (){
         </div>
     </section>
    <section class="bottomInfo">
-
+    <div class="slider">
+        <img src="./Assets/images/popShow.png" alt="Image 1">
+        <img src="./Assets/images/popShow.png" alt="Image 2">
+        <img src="./Assets/images/popShow.png" alt="Image 3">
+        <img src="./Assets/images/popShow.png" alt="Image 3">
+      </div>
    </section>
     
     <div id="open-modal" class="modal-window">
@@ -94,6 +98,7 @@ function SubForm (){
           <div><small>Gracias por estar con nosotros 😀</small></div>
           <br>
           <form id="myForm">
+            <input type="hidden" id="date" value="dateTime2" name="dateTime" />
             <label>Nombre</label>
             <br/>
             <input id="name" name="full_name" />
@@ -110,6 +115,7 @@ function SubForm (){
           <button onclick="SubForm()">Submit</button></a>
         </div>
     </div>
+    <script src="./Js/date.js"></script>
     <script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
 </body>
 </html>

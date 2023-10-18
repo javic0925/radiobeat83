@@ -10,6 +10,10 @@ function getCurrentDateAndTime() {
   
   // Target an HTML element to display the current date and time
   const dateDisplay = document.getElementById("date-container");
+
+  const dateModal = document.getElementById("date")
+
+  dateModal.setAttribute('value', getCurrentDateAndTime());
   
   // Set the innerHTML of the element to the current date and time returned by the function
   dateDisplay.innerHTML = getCurrentDateAndTime();

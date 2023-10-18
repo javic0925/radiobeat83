@@ -2,14 +2,14 @@ $(function () {
     var song = document.getElementsByTagName('audio')[0],
         sourceMp3 = document.getElementsByTagName('audio')[0];
 
-    sourceMp3.src = 'https://ice55.securenetsystems.net/DASH48';
+    sourceMp3.src = 'https://stream.zeno.fm/ns1rsez0pnhvv';
 
 
     $('#player').click(function (e) {
         e.preventDefault();
         if (song.paused) song.play();
         else 
-        song.setAttribute('src' , 'https://ice55.securenetsystems.net/DASH48'); 
+        song.setAttribute('src' , 'https://stream.zeno.fm/ns1rsez0pnhvv'); 
     
     });
     $('#player').bind('click', function() {
@@ -20,7 +20,7 @@ $(function () {
     });
 
     song.addEventListener('pause', function () {
-        song.setAttribute('src' , 'https://ice55.securenetsystems.net/DASH48');
+        song.setAttribute('src' , 'https://stream.zeno.fm/ns1rsez0pnhvv');
         song.currentTime = 0;
         $('#playback').attr('src', './Assets/Icons/play_music_icon.png');
     });

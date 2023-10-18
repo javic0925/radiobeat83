@@ -7,7 +7,7 @@
 @font-face {
   font-family: Jetbrains;
   src: local('Jetbrains'), 
-        url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+        url('./Assets/font/JetBrainsMono-Regular.woff2') format('truetype');
 }
 
 html{
@@ -170,6 +170,36 @@ height: 100%;
 
     }
 } 
+
+.bottomInfo{
+  height: 40vh;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.slider {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll; 
+}
+
+.slider::-webkit-scrollbar {
+  display: none;}
+
+
+.slider img {
+  width: auto;
+  height: 40%;
+  margin: 1rem;
+}
 
 
 .btn {
