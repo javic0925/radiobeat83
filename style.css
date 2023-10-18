@@ -195,6 +195,7 @@ video {
   width: auto;
   height: 40%;
   margin: 1rem;
+  border-radius: 1rem;
 }
 
 .btn {
