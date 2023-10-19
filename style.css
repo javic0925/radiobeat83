@@ -35,7 +35,7 @@ video {
 
 .main {
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -59,7 +59,7 @@ video {
 
 .playerMain {
   width: 100vw;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +71,7 @@ video {
 .musicPlayer {
   position: relative;
   width: 40%;
-  height: 30%;
+  height: 60%;
   transform: translateX(-5%);
   border-radius: 1rem 3rem 3rem 1rem;
   padding: 1rem;
@@ -85,13 +85,14 @@ video {
 
 .socialIcons {
   height: auto;
-  width: 43%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  padding: 1rem;
+  gap: 1.5rem;
 }
 .socialIcons h2 {
   width: 100%;
@@ -168,19 +169,27 @@ video {
 }
 
 .bottomInfo {
-  height: 40vh;
+  height: 30vh;
   width: 100vw;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
+  overflow: hidden;
+}
+.bottomInfo h2 {
+  width: 90%;
+  height: 10%;
+  padding: 0 1rem;
 }
 
 .slider {
   width: 90%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   flex-wrap: nowrap;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -193,8 +202,8 @@ video {
 
 .slider img {
   width: auto;
-  height: 40%;
-  margin: 1rem;
+  height: 90%;
+  margin: 0 1rem;
   border-radius: 1rem;
 }
 
@@ -296,30 +305,24 @@ small {
 
 @media screen and (min-width: 390px) and (max-width: 1290px) {
   .playerMain {
-    height: 50vh;
+    height: 35vh;
   }
   .musicPlayer {
     position: relative;
     width: 80%;
-    height: 40%;
-  }
-  .socialIcons {
-    width: 87%;
+    height: 55%;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 390px) {
   .playerMain {
-    height: 50vh;
+    height: 40vh;
   }
   .musicPlayer {
     position: relative;
     width: 80%;
-    height: 37%;
+    height: 50%;
     border-radius: 1rem;
     transform: translateX(0);
-  }
-  .socialIcons {
-    width: 79%;
   }
   #player {
     height: 40%;
