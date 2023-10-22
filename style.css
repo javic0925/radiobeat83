@@ -37,7 +37,7 @@ video {
 
 .main {
   width: 100vw;
-  height: 12vh;
+  height: 7vh;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -50,10 +50,10 @@ video {
   height: 100%;
   display: flex;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 1rem 0;
 }
 .logo img {
-  height: 3rem;
+  height: 100%;
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -65,17 +65,14 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
   align-items: center;
-  overflow: hidden;
 }
 
 .musicPlayer {
   position: relative;
-  width: 40%;
+  width: 90%;
   height: 60%;
-  transform: translateX(-5%);
-  border-radius: 1rem 3rem 3rem 1rem;
+  border-radius: 1rem 10rem 10rem 1rem;
   padding: 1rem;
   display: flex;
   flex-direction: row;
@@ -86,7 +83,7 @@ video {
 }
 
 .socialIcons {
-  height: auto;
+  height: 30%;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -105,9 +102,10 @@ video {
 
 #playerInfo {
   width: 75%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 #playerInfo h2 {
@@ -120,7 +118,7 @@ video {
 }
 
 #playerButtons {
-  width: 75%;
+  width: auto;
   height: 20%;
   display: flex;
   flex-direction: row;
@@ -152,7 +150,7 @@ video {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(25%);
+  transform: translateX(0);
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 100%;
@@ -171,7 +169,7 @@ video {
 }
 
 .bottomInfo {
-  height: 42vh;
+  height: 47vh;
   width: 100vw;
   margin: auto;
   display: flex;
@@ -212,20 +210,21 @@ video {
   gap: 1rem;
 }
 #showBox img {
-  height: 40%;
+  height: 30%;
   width: auto;
   border-radius: 1rem;
 }
 #showBox h1 {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 #showBox p {
+  text-align: justify;
   font-size: 1.4rem;
 }
 
 #showTime {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0%;
   height: auto;
 }
@@ -332,50 +331,32 @@ small {
   text-align: center;
   color: lightgray;
 }
-
-@media screen and (min-width: 390px) and (max-width: 1290px) {
-  .playerMain {
-    height: 35vh;
-  }
-  .musicPlayer {
-    position: relative;
-    width: 80%;
-    height: 55%;
-  }
-}
-.bottomInfo {
-  height: 50vh;
-}
-
-#showBox img {
-  height: 40%;
-  width: auto;
-  border-radius: 1rem;
-}
-#showBox h1 {
-  font-weight: bold;
-  font-size: 1.8rem;
-}
-#showBox p {
-  font-size: 1rem;
-}
-
-#showTime {
-  font-size: 1.2rem;
-  padding: 0%;
-  height: auto;
+#devInfo p {
+  font-size: 1.6rem;
 }
 
 @media screen and (min-width: 200px) and (max-width: 390px) {
-  .playerMain {
-    height: 40vh;
-  }
   .musicPlayer {
     position: relative;
-    width: 80%;
     height: 50%;
     border-radius: 1rem;
-    transform: translateX(0);
+  }
+  #showBox img {
+    height: 35%;
+    width: auto;
+    border-radius: 1rem;
+  }
+  #showBox h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  #showBox p {
+    font-size: 1rem;
+  }
+  #showTime {
+    font-size: 1.2rem;
+    padding: 0%;
+    height: auto;
   }
   #player {
     height: 40%;
@@ -383,10 +364,51 @@ small {
     justify-content: center;
     align-items: center;
     top: 1rem;
-    right: 2rem;
+    right: 1rem;
   }
   #player #playback {
     height: auto;
     width: 35%;
+  }
+}
+@media screen and (min-width: 390px) and (max-width: 1080px) {
+  .musicPlayer {
+    height: 50%;
+  }
+  #showBox img {
+    height: 35%;
+    width: auto;
+    border-radius: 1rem;
+  }
+  #showBox h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  #showBox p {
+    font-size: 1rem;
+  }
+  #showTime {
+    font-size: 1.2rem;
+    padding: 0%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1080px) and (max-width: 1440px) {
+  #showBox img {
+    height: 50%;
+    width: auto;
+    border-radius: 1rem;
+  }
+  #showBox h1 {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  #showBox p {
+    font-size: 1.2rem;
+  }
+  #showTime {
+    font-size: 1.4rem;
+    padding: 0%;
+    height: auto;
   }
 }/*# sourceMappingURL=style.css.map */
