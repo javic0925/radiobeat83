@@ -39,8 +39,19 @@ let mediaSession = navigator.mediaSession;
 
 if ("mediaSession" in navigator){
     navigator.mediaSession.metadata = new MediaMetadata({
-      title: "Radio",
+      title: "Beat83 FM",
       artist: "Beat83",
-      album: "",
-      artwork: [{src: ""}]
+      album: "Playing all time favorites",
+      artwork: [
+        {
+            src: "http://radio.beat83.com/Assets/images/coverArt96x96.png",
+            sizes: "96x96",
+            type: "image/png",
+        },
+        {
+          src: "http://radio.beat83.com/Assets/images/coverArt.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
     });}
